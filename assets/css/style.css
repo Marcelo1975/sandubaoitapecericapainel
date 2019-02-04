@@ -1,0 +1,359 @@
+/*
+* @Template CSS
+* @version 1.0
+* @Copyright m18web 2019
+* @access public
+* @Author Marcelo A. Rodrigues
+*/
+html, body{/*COR DE FUNDO DO SITE*/
+	background-color: #EEE;
+	width: 100%;
+	height: 100%;
+}
+.exitAdmin a {/*BOTAO SAIR*/
+	font-weight: bold;
+	color:#FFF;
+}
+.title-sandubao{/*TITULO DO SITE*/
+	margin-left: 1em;
+}
+.mainLeft{/*MENU LATERAL*/
+  	width: 12em;
+  	min-height: 100vh;
+  	top:0;
+  	bottom:0;
+	background-color: #2F4F4F;
+	float: left;
+	margin-left: -1em;
+	color:#FFF;
+	padding-top:1em;
+	position: fixed;
+}
+.nav-item{
+	display: flex;
+}
+.nav-item a{
+	padding-top: 1.5em;
+}
+.nav-item a{
+	text-decoration: none;
+	font-weight: bold;
+	color:#FFF;
+}
+.nav-item{
+	width: 12em;
+}
+.nav-item a:hover{
+	width:12em; 	
+	background-color: #EEE;
+	color:#000;
+}
+.nav-img{
+	float: left;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+.menu-icon{
+	display: none;
+	width: 3em;
+	height: 3em;
+}
+/*FIM DO MENU LATERAL*/
+.reports{/*GERADOR DE RELATORIOS*/
+	width: 100%;
+	display: flex;
+	flex:1;
+}
+.sale img{/*IMAGEM GERA RELATORIO DE VENDA*/
+	width: 10em;
+	height: 10em;
+	margin-top: 4em;
+	margin-left: -15em;
+	margin-right: 2em;
+}
+.sale-span{
+	font-weight: bold;
+	margin-top: 15em;
+	margin-left: -15em;
+}
+.spending img{
+	width: 10em;
+	height: 10em;
+	margin-top: 4em;
+	margin-left: 4em;
+}
+.spending-span{
+	font-weight: bold;
+	margin-top: 15em;
+	margin-left: -9em;
+}
+/*FINAL DA SEÇÃO DE RELATORIOS*/
+.video iframe{/*VIDEO AUTOINFORMATIVO*/
+	width: 100%;
+	height: 20em;
+	margin-top: 2em;
+}
+.recipe{/*ESTILO GASTOS*/
+	width: 100%;
+	height: 5em;
+	background-color: #FF0000;
+	padding-left: 1em;
+	line-height:5em;
+	color:#FFF;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.sales{/*ESTILO VENDAS*/
+	width: 100%;
+	height: 5em;
+	background-color: #0000FF;
+	padding-left: 1em;
+	line-height:5em;
+	color:#FFF;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.liquid{/*ESTILO LIQUIDO DE GASTOS E VENDAS*/
+	width: 100%;
+	height: 5em;
+	background-color: #006400;
+	padding-left: 1em;
+	line-height:5em;
+	color:#FFF;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.userName{/*NOME DO USUARIO*/
+	margin-left: 2em;
+	padding-top: 1em;
+	color:#FFF;
+}
+/*ESTILO CAIXA ELTRONICO*/
+.cash h3{
+	text-align: center;
+}
+.green{
+	color:#00FF00;
+}
+.red{
+	color:#FF0000;
+}
+.instruc{
+	border:0.1em solid #CCC;
+}
+/*FIM DO CAIXA ELETRONICO*/
+.rh a{/*SEÇÃO RH*/
+	float: right;
+	margin-bottom: 1em;
+}
+.dishesList{/*ESTILO CARDAPIO*/
+	margin-top: 5em;
+}
+.content{/*ESTILO CONTAINER CENTRAL*/
+	border:0.1em solid #CCC;
+	padding:0.2em;
+}
+.center{
+	margin-left: 12em;
+}
+.support-footer{/*ESTILO RODAPE SUPORTE*/
+	width: 100%;
+	margin-top: 1em;
+}
+.what{
+	text-align: center;
+	background-color: #006400;
+	color:#FFF;
+}
+.email{
+	text-align: center;
+	background-color: #0000FF;
+	color:#FFF;
+}
+.site{
+	text-align: center;
+	background-color: #006400;
+	color:#FFF;
+}
+.site a{
+	color:#FFF;
+}/*FINAL DO SOPORTE*/
+
+/*VERSOES MOBILE*/
+@media screen and (max-width: 2560px) {	
+	.container{
+	  	width: 100%;
+	 	height: 100%;
+		margin-left: 12em;
+	}
+}
+
+@media screen and (max-width: 1440px) {	
+	.container{
+	  	width: 80%;
+	 	height: 100%;
+		margin-left: 12em;
+	}
+}
+
+@media screen and (max-width: 1024px) {	
+	.container{
+	  	width: 80%;
+	 	height: 100%;
+		margin-left: 12em;
+	}
+
+}
+
+@media screen and (max-width: 768px) {	
+	.container{
+	  	width:65%;
+	 	height: 100%;
+		margin-left: 12em;
+		font-size: 0.8em;
+	}
+	.recipe,
+	.sales,
+	.liquid{
+		font-size: 0.9em;
+	}
+	.table-rh{
+		margin-left: -12em;
+	}
+	.menu-icon{
+		display: block;
+		margin-left: 1em;
+	}
+	.mainLeft{
+		display: none;
+		z-index: 999;
+	}
+	.mainLeft{
+	  	width: 12em;
+	 	height: 100%;
+		position: fixed;
+		background-color: #2F4F4F;
+		float: left;
+		margin-left:-1em;
+		color:#FFF;
+		padding-top: 3em;
+	}
+}
+
+@media screen and (max-width: 425px) {	
+	.container{
+	  	width: 85%;
+	 	height: 100%;
+		margin-left: 2em;
+		font-size: 0.6em;
+	}
+	.menu-icon{
+		display: block;
+		margin-left: 1em;
+	}
+	.mainLeft{
+		display: none;
+		z-index: 999;
+	}
+	.sale img{
+		width: 8em;
+		height: 8em;
+		margin-top: 10em;
+		margin-left: -24em;
+		margin-right: 2em;
+	}
+	.sale-span{
+		font-weight: bold;
+		margin-top: 20em;
+		margin-left: -24em;
+	}
+	.spending img{
+		width: 8em;
+		height: 8em;
+		margin-top: 10em;
+		margin-left: 4em;
+	}
+	.spending-span{
+		font-weight: bold;
+		margin-top: 15em;
+		margin-top: 20em;
+		margin-left: -9em;
+	}
+}
+
+@media screen and (max-width: 375px) {	
+	.container-fluid{
+	  	width: 100%;
+	 	height: 100%;
+		margin-left: -6em;
+		font-size: 1em;
+	}
+	.menu-icon{
+		display: block;
+		margin-left: 1em;
+	}
+	.mainLeft{
+		margin-left: 8em;
+		display: none;
+		z-index: 999;
+	}
+	.reports{
+		width: 100%;
+		margin-left: 1em;
+	}
+	.sale img{/*IMAGEM GERA RELATORIO DE VENDA*/
+		width: 5em;
+		height: 5em;
+		margin-top: 14em;
+		margin-left: -20em;
+	}
+	.spending img{
+		width: 5em;
+		height: 5em;
+		margin-top: 14em;
+		margin-left: 6em;
+		margin-right: 5em;
+
+	}
+}
+
+@media screen and (max-width: 320px) {	
+	.container-fluid{
+	  	width: 100%;
+	 	height: 100%;
+		margin-left: -6em;
+		font-size: 1em;
+	}
+	.menu-icon{
+		display: block;
+		margin-left: 1em;
+	}
+	.mainLeft{
+		margin-left: 10em;
+		display: none;
+		z-index: 999;
+	}
+	.reports{
+		width: 100%;
+		margin-left: 1em;
+	}
+	.sale img{/*IMAGEM GERA RELATORIO DE VENDA*/
+		width: 5em;
+		height: 5em;
+		margin-top: 14em;
+		margin-left: -21em;
+	}
+	.sale-span{
+		font-weight: bold;
+		margin-top: 20em;
+		margin-left: -21em;
+	}
+	.spending img{
+		width: 5em;
+		height: 5em;
+		margin-top: 14em;
+		margin-left: 6em;
+		margin-right: 5em;
+
+	}
+}
