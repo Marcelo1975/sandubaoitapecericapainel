@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="sendEmail">
@@ -32,7 +32,7 @@
 		</div>
 		<div class="col-sm-6 video">
 			<h2>Tutorial de uso</h2>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/QBnDdZ1xEVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe  src="https://www.youtube.com/embed/QBnDdZ1xEVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 	<div class="support-footer">

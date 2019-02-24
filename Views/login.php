@@ -17,12 +17,12 @@
     </div>
     <?php endif; ?>
         <div class="form-group">
-            <label id="email">E-mail:</label>
-            <input type="email" name="email" class="form-control" autofocus />
+            <label id="email" style="color:#000;">E-mail:</label>
+            <input type="email" name="email" class="form-control" autofocus placeholder="exemplo@gmail.com" />
         </div>
         <div class="form-group">
-            <label id="password">Senha:</label>
-            <input type="password" name="password" class="form-control" />
+            <label id="password" style="color:#000;">Senha:</label>
+            <input type="password" name="password" class="form-control" placeholder="teste" />
         </div>
         <input type="submit" value="Entrar" class="btn btn-primary" />
         <a href="<?php echo BASE_URL; ?>login/add_user">Cadastre-se</a>

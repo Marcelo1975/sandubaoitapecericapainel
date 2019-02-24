@@ -21,7 +21,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-8" style="margin-top: 1em;">
+		<div class="col-sm-8">
 			<canvas id="graphic"></canvas>
 		</div>
 
@@ -146,43 +146,4 @@
 	var days_list = <?php echo json_encode($days_list); ?>;
 	var finances = <?php echo json_encode(array_values($finances)); ?>;
 	var sales = <?php echo json_encode(array_values($sales)); ?>;
-	window.onload = function() {
-		var ctx = document.getElementById("graphic").getContext('2d');
-		var myChart = new Chart(ctx, {
-		    type: 'line',
-		    data: {
-		        labels:days_list,
-		        datasets: [{
-		            label: 'Gastos',
-		            data: finances,
-		            backgroundColor: [
-		                'rgba(255, 0, 0)'
-		            ],
-		            borderColor: [
-		                'rgba(255,0, 0)'
-		            ],
-		            borderWidth: 1
-		        }, {
-		        	label:'Vendas',
-		        	data:sales,
-		        	backgroundColor: [
-		                'rgba(0, 0, 255)'
-		            ],
-		            borderColor: [
-		                'rgba(0, 0, 255)'
-		            ],
-		            borderWidth: 1
-		        }]
-		    },
-		    options: {
-		        scales: {
-		            yAxes: [{
-		                ticks: {
-		                    beginAtZero:true
-		                }
-		            }]
-		        }
-		    }
-		});
-	}
 </script>

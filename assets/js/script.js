@@ -1,10 +1,42 @@
-function toggleMenu(){
-	var menu = document.getElementById("menu");
-	if(menu.style.display == 'none' || menu.style.display == ''){
-	  menu.style.display = 'block';
-	}else{
-	  menu.style.display = 'none';
+$(function(){
+	window.onload = function() {
+		var ctx = document.getElementById("graphic").getContext('2d');
+		var myChart = new Chart(ctx, {
+		    type: 'line',
+		    data: {
+		        labels:days_list,
+		        datasets: [{
+		            label: 'Gastos',
+		            data: finances,
+		            backgroundColor: [
+		                'rgba(255, 0, 0)'
+		            ],
+		            borderColor: [
+		                'rgba(255,0, 0)'
+		            ],
+		            borderWidth: 1
+		        }, {
+		        	label:'Vendas',
+		        	data:sales,
+		        	backgroundColor: [
+		                'rgba(0, 0, 255)'
+		            ],
+		            borderColor: [
+		                'rgba(0, 0, 255)'
+		            ],
+		            borderWidth: 1
+		        }]
+		    },
+		    options: {
+		        scales: {
+		            yAxes: [{
+		                ticks: {
+		                    beginAtZero:true
+		                }
+		            }]
+		        }
+		    }
+		});
 	}
-}
-
+});
 

@@ -1,98 +1,157 @@
 /*
-* @Template CSS
-* @version 1.0
-* @Copyright m18web 2019
-* @access public
-* @Author Marcelo A. Rodrigues
+    DEMO STYLE
 */
-html, body{/*COR DE FUNDO DO SITE*/
-	background-color: #EEE;
-	width: 100%;
-	height: 100%;
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
 }
-.exitAdmin a {/*BOTAO SAIR*/
-	font-weight: bold;
-	color:#FFF;
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
 }
-.title-sandubao{/*TITULO DO SITE*/
-	margin-left: 1em;
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
 }
-.mainLeft{/*MENU LATERAL*/
-  	width: 12em;
-  	min-height: 100vh;
-  	top:0;
-  	bottom:0;
-	background-color: #2F4F4F;
-	float: left;
-	margin-left: -1em;
-	color:#FFF;
-	padding-top:1em;
-	position: fixed;
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
-.nav-item{
-	display: flex;
-}
-.nav-item a{
-	padding-top: 1.5em;
-}
-.nav-item a{
-	text-decoration: none;
-	font-weight: bold;
-	color:#FFF;
-}
-.nav-item{
-	width: 12em;
-}
-.nav-item a:hover{
-	width:12em; 	
-	background-color: #EEE;
-	color:#000;
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
 }
 .nav-img{
-	float: left;
-	margin-left: 1em;
-	margin-right: 1em;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
-.menu-icon{
-	display: none;
-	width: 3em;
-	height: 3em;
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
 }
-/*FIM DO MENU LATERAL*/
-.reports{/*GERADOR DE RELATORIOS*/
-	width: 100%;
-	display: flex;
-	flex:1;
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    perspective: 1500px;
 }
-.sale img{/*IMAGEM GERA RELATORIO DE VENDA*/
-	width: 10em;
-	height: 10em;
-	margin-top: 4em;
-	margin-left: -15em;
-	margin-right: 2em;
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #2F4F4F;
+    color: #fff;
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transform-origin: bottom left;
 }
-.sale-span{
-	font-weight: bold;
-	margin-top: 15em;
-	margin-left: -15em;
+
+#sidebar.active {
+    margin-left: -250px;
+    transform: rotateY(100deg);
 }
-.spending img{
-	width: 10em;
-	height: 10em;
-	margin-top: 4em;
-	margin-left: 4em;
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #2F4F4F;
 }
-.spending-span{
-	font-weight: bold;
-	margin-top: 15em;
-	margin-left: -9em;
+
+#sidebar ul.components {
+    padding: 20px 0;
 }
-/*FINAL DA SEÇÃO DE RELATORIOS*/
-.video iframe{/*VIDEO AUTOINFORMATIVO*/
-	width: 100%;
-	height: 20em;
-	margin-top: 2em;
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
 }
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article, a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
 .recipe{/*ESTILO GASTOS*/
 	width: 100%;
 	height: 5em;
@@ -123,42 +182,54 @@ html, body{/*COR DE FUNDO DO SITE*/
 	font-size: 1.2em;
 	font-weight: bold;
 }
+#content {
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
 .userName{/*NOME DO USUARIO*/
-	margin-left: 2em;
+	margin-left: 1em;
 	padding-top: 1em;
 	color:#FFF;
 }
-/*ESTILO CAIXA ELTRONICO*/
-.cash h3{
-	text-align: center;
+
+/*FIM DO MENU LATERAL*/
+.reports{/*GERADOR DE RELATORIOS*/
+	width: 100%;
+	display: flex;
+	flex:1;
 }
-.green{
-	color:#00FF00;
+.sale img{/*IMAGEM GERA RELATORIO DE VENDA*/
+	width: 10em;
+	height: 10em;
+	margin-top: 4em;
+	margin-left: -15em;
+	margin-right: 2em;
 }
-.red{
-	color:#FF0000;
+.sale-span{
+	font-weight: bold;
+	margin-top: 15em;
+	margin-left: -15em;
 }
-.instruc{
-	border:0.1em solid #CCC;
+.spending img{
+	width: 10em;
+	height: 10em;
+	margin-top: 4em;
+	margin-left: 4em;
 }
-/*FIM DO CAIXA ELETRONICO*/
-.rh a{/*SEÇÃO RH*/
-	float: right;
-	margin-bottom: 1em;
+.spending-span{
+	font-weight: bold;
+	margin-top: 15em;
+	margin-left: -9em;
 }
-.dishesList{/*ESTILO CARDAPIO*/
-	margin-top: 5em;
-}
-.content{/*ESTILO CONTAINER CENTRAL*/
-	border:0.1em solid #CCC;
-	padding:0.2em;
-}
-.center{
-	margin-left: 12em;
-}
+
 .support-footer{/*ESTILO RODAPE SUPORTE*/
 	width: 100%;
 	margin-top: 1em;
+}
+.video{
+	width: 100%;
+	height: auto;
 }
 .what{
 	text-align: center;
@@ -169,6 +240,7 @@ html, body{/*COR DE FUNDO DO SITE*/
 	text-align: center;
 	background-color: #0000FF;
 	color:#FFF;
+	font-size: 0.8rem;
 }
 .site{
 	text-align: center;
@@ -177,126 +249,110 @@ html, body{/*COR DE FUNDO DO SITE*/
 }
 .site a{
 	color:#FFF;
-}/*FINAL DO SOPORTE*/
-
-/*VERSOES MOBILE*/
-@media screen and (max-width: 2560px) {	
-	.container{
-	  	width: 100%;
-	 	height: 100%;
-		margin-left: 12em;
-	}
 }
 
-@media screen and (max-width: 1440px) {	
-	.container{
-	  	width: 80%;
-	 	height: 100%;
-		margin-left: 12em;
-	}
+.instruc{
+	border:0.1em solid #CCC;
 }
 
-@media screen and (max-width: 1024px) {	
-	.container{
-	  	width: 80%;
-	 	height: 100%;
-		margin-left: 12em;
-	}
-
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
 }
 
-@media screen and (max-width: 768px) {	
-	.container{
-	  	width:65%;
-	 	height: 100%;
-		margin-left: 12em;
-		font-size: 0.8em;
-	}
-	.recipe,
-	.sales,
-	.liquid{
-		font-size: 0.9em;
-	}
-	.table-rh{
-		margin-left: -12em;
-	}
-	.menu-icon{
-		display: block;
+#sidebarCollapse span {
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    display: block;
+    background: #555;
+    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+    transition-delay: 0.2s;
+}
+
+#sidebarCollapse span:first-of-type {
+    transform: rotate(45deg) translate(2px, 2px);
+}
+#sidebarCollapse span:nth-of-type(2) {
+    opacity: 0;
+}
+#sidebarCollapse span:last-of-type {
+    transform: rotate(-45deg) translate(1px, -1px);
+}
+
+
+#sidebarCollapse.active span {
+    transform: none;
+    opacity: 1;
+    margin: 5px auto;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+        transform: rotateY(90deg);
+    }
+    #sidebar.active {
+        margin-left: 0;
+        transform: none;
+    }
+    #sidebarCollapse span:first-of-type,
+    #sidebarCollapse span:nth-of-type(2),
+    #sidebarCollapse span:last-of-type {
+        transform: none;
+        opacity: 1;
+        margin: 5px auto;
+    }
+    #sidebarCollapse.active span {
+        margin: 0 auto;
+    }
+    #sidebarCollapse.active span:first-of-type {
+        transform: rotate(45deg) translate(2px, 2px);
+    }
+    #sidebarCollapse.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    #sidebarCollapse.active span:last-of-type {
+        transform: rotate(-45deg) translate(1px, -1px);
+    }
+
+}
+@media screen and (max-width: 375px) (min-width: 320px) {
+	.reports{
+		width: 100%;
 		margin-left: 1em;
 	}
-	.mainLeft{
-		display: none;
-		z-index: 999;
-	}
-	.mainLeft{
-	  	width: 12em;
-	 	height: 100%;
-		position: fixed;
-		background-color: #2F4F4F;
-		float: left;
-		margin-left:-1em;
-		color:#FFF;
-		padding-top: 3em;
-	}
+	.sale img {
+	    width: 7em;
+	    height: 6em;
+	    margin-top: 9em;
+	    margin-left: -15em;
+	    margin-right: 2em;
 }
-
-@media screen and (max-width: 425px) {	
-	.container{
-	  	width: 85%;
-	 	height: 100%;
-		margin-left: 2em;
-		font-size: 0.6em;
-	}
-	.menu-icon{
-		display: block;
-		margin-left: 1em;
-	}
-	.mainLeft{
-		display: none;
-		z-index: 999;
-	}
-	.sale img{
-		width: 8em;
-		height: 8em;
-		margin-top: 10em;
-		margin-left: -24em;
-		margin-right: 2em;
-	}
 	.sale-span{
 		font-weight: bold;
 		margin-top: 20em;
-		margin-left: -24em;
+		margin-left: -15m;
 	}
 	.spending img{
-		width: 8em;
-		height: 8em;
-		margin-top: 10em;
-		margin-left: 4em;
+		width: 5em;
+		height: 5em;
+		margin-top: 14em;
+		margin-left: 3em;
+		margin-right: 12em;
 	}
 	.spending-span{
 		font-weight: bold;
-		margin-top: 15em;
-		margin-top: 20em;
-		margin-left: -9em;
+	    margin-top: 20em;
+	    margin-left: -17em;
 	}
-}
 
-@media screen and (max-width: 375px) {	
-	.container-fluid{
-	  	width: 100%;
-	 	height: 100%;
-		margin-left: -6em;
-		font-size: 1em;
-	}
-	.menu-icon{
-		display: block;
-		margin-left: 1em;
-	}
-	.mainLeft{
-		margin-left: 8em;
-		display: none;
-		z-index: 999;
-	}
+@media screen and (max-width: 320px) {
 	.reports{
 		width: 100%;
 		margin-left: 1em;
@@ -305,55 +361,23 @@ html, body{/*COR DE FUNDO DO SITE*/
 		width: 5em;
 		height: 5em;
 		margin-top: 14em;
-		margin-left: -20em;
-	}
-	.spending img{
-		width: 5em;
-		height: 5em;
-		margin-top: 14em;
-		margin-left: 6em;
-		margin-right: 5em;
-
-	}
-}
-
-@media screen and (max-width: 320px) {	
-	.container-fluid{
-	  	width: 100%;
-	 	height: 100%;
-		margin-left: -6em;
-		font-size: 1em;
-	}
-	.menu-icon{
-		display: block;
-		margin-left: 1em;
-	}
-	.mainLeft{
-		margin-left: 10em;
-		display: none;
-		z-index: 999;
-	}
-	.reports{
-		width: 100%;
-		margin-left: 1em;
-	}
-	.sale img{/*IMAGEM GERA RELATORIO DE VENDA*/
-		width: 5em;
-		height: 5em;
-		margin-top: 14em;
-		margin-left: -21em;
+		margin-left: -15em;
 	}
 	.sale-span{
 		font-weight: bold;
 		margin-top: 20em;
-		margin-left: -21em;
+		margin-left: -15m;
 	}
 	.spending img{
 		width: 5em;
 		height: 5em;
 		margin-top: 14em;
-		margin-left: 6em;
-		margin-right: 5em;
-
+		margin-left: 3em;
+		margin-right: 12em;
+	}
+	.spending-span{
+		font-weight: bold;
+	    margin-top: 20em;
+	    margin-left: -17em;
 	}
 }
