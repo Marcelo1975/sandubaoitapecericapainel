@@ -39,4 +39,12 @@ $(function(){
 		});
 	}
 });
-
+$(function(){
+	CKEDITOR.replace("description");
+});
+$(function(){
+	CKEDITOR.replace("featurettedescription");
+});
+$(function(){
+	CKEDITOR.replace("bodyabout");
+});

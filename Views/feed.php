@@ -33,7 +33,7 @@
 			<hr/>
 			<div class="form-group">
 				<label for="description">Texto</label>
-				<input type="text" name="description" id="description" class="form-control" />
+				<textarea name="description" id="description" class="form-control" rows="5"></textarea>
 			</div>
 			<button type="submit" class="btn btn-primary">Salvar</button>
 		</form>
@@ -52,7 +52,7 @@
 				<input type="text" name="featurettetitle" id="featurettetitle" class="form-control" />
 
 				<label for="featurettedescription">Descrição</label>
-				<input type="text" name="featurettedescription" id="featurettedescription" class="form-control" />
+				<textarea name="featurettedescription" id="featurettedescription" class="form-control" rows="5"></textarea>
 			</div>
 			<button type="submit" class="btn btn-primary">Salvar</button>
 		</form>
