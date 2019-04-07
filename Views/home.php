@@ -111,8 +111,6 @@
 				    <label for="title">Título</label>
 				    <input type="text" class="form-control" name="title" id="title" placeholder="Título para sua anotação...">
 				</div>
-
-
 				<div class="form-group">
 				    <label for="msg">Anotação</label>
 				    <textarea class="form-control" name="msg" id="msg" rows="3" placeholder="Digite sua anotação aqui..."></textarea>
@@ -121,7 +119,10 @@
 			</form>
 		</div>
 		<div class="col-sm-4">
-			Suas anotações<br/>
+			<div>
+				<span class="title d-flex">Suas anotações</span>
+				<a href="<?php echo BASE_URL; ?>home/viewAllAnnotations" class="btn btn-primary d-flex anoButton">Ver Todas</a>
+			</div>
 			<?php foreach($annotations as $an): ?>
 			<table class="table">
 			  <thead>
@@ -133,7 +134,8 @@
 			  <tbody>
 			    <tr>
 			      <th scope="row"><?php echo $an['id']; ?></th>
-			      <td><a href="<?php echo BASE_URL.'home/viewAnnotation/'.$an['id']; ?>"><?php echo $an['title']; ?></a></td>
+				  <td><?php echo $an['title']; ?></td>
+				  <td><a href="<?php echo BASE_URL.'home/viewAnnotation/'.$an['id']; ?>" class="btn btn-success">Visualizar</a></td>
 			    </tr>
 			  </tbody>
 			</table>
@@ -146,4 +148,43 @@
 	var days_list = <?php echo json_encode($days_list); ?>;
 	var finances = <?php echo json_encode(array_values($finances)); ?>;
 	var sales = <?php echo json_encode(array_values($sales)); ?>;
+	window.onload = function() {
+		var ctx = document.getElementById("graphic").getContext('2d');
+		var myChart = new Chart(ctx, {
+		    type: 'line',
+		    data: {
+		        labels:days_list,
+		        datasets: [{
+		            label: 'Gastos',
+		            data: finances,
+		            backgroundColor: [
+		                'rgba(255, 0, 0)'
+		            ],
+		            borderColor: [
+		                'rgba(255,0, 0)'
+		            ],
+		            borderWidth: 1
+		        }, {
+		        	label:'Vendas',
+		        	data:sales,
+		        	backgroundColor: [
+		                'rgba(0, 0, 255)'
+		            ],
+		            borderColor: [
+		                'rgba(0, 0, 255)'
+		            ],
+		            borderWidth: 1
+		        }]
+		    },
+		    options: {
+		        scales: {
+		            yAxes: [{
+		                ticks: {
+		                    beginAtZero:true
+		                }
+		            }]
+		        }
+		    }
+		});
+	}
 </script>

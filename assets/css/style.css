@@ -41,6 +41,15 @@ a, a:hover, a:focus {
     margin-left: 1rem;
     margin-right: 1rem;
 }
+.anoButton{
+    justify-content: center;
+}
+.title{
+    justify-content: center;
+    font-weight: bold;
+    color:#0000FF;
+    font-size: 1.3rem;
+}
 
 .line {
     width: 100%;
@@ -171,6 +180,9 @@ a.article, a.article:hover {
 	color:#FFF;
 	font-size: 1.2em;
 	font-weight: bold;
+}
+.sale a{
+    display: block;
 }
 .liquid{/*ESTILO LIQUIDO DE GASTOS E VENDAS*/
 	width: 100%;

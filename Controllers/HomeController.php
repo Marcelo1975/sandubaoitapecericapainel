@@ -36,7 +36,8 @@ class HomeController extends Controller {
             $annotations->add($title, $annotation);
         }
 
-        $data['annotations'] = $annotations->getAll();
+        $data['annotations'] = $annotations->getAllAnotHome();
+        
         //DIAS DO MES
         $data['days_list'] = array();
         for($q=31;$q>0;$q--) {
@@ -55,6 +56,17 @@ class HomeController extends Controller {
         $this->loadTemplate('home', $data);
     }
     //APRESENTAÇÃO DAS ANOTAÇÕES
+    public function viewAllAnnotations() {
+        $data = array(
+            'user' => $this->user
+        );
+        $annotations = new Annotations();
+
+        $data['annotationsAll'] = $annotations->getAll();
+
+        $this->loadTemplate('viewAllAnnotations', $data);
+    }
+
     public function viewAnnotation($id) {
         $annotations = new Annotations();
         $array = array(

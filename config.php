@@ -7,7 +7,7 @@ global $db;
 
 $config = array();
 if(ENVIRONMENT == 'development') {
-	define("BASE_URL", "http://localhost/cpanel/");
+	define("BASE_URL", "http://localhost/www/sandubaoitapecericapainel/");
 	$config['dbname'] = 'sandubao';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
