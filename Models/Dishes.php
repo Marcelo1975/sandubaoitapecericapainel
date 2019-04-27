@@ -89,11 +89,12 @@ class Dishes extends Model {
         return $array;
     }
     //adiciona item a lista de cardapio tradicional
-    public function addDishes($name, $description) {
-    	$sql = "INSERT INTO menu (name, description) VALUES (:name, :description)";
+    public function addDishes($name, $description, $price) {
+    	$sql = "INSERT INTO menu (name, description, price) VALUES (:name, :description, :price)";
     	$sql = $this->db->prepare($sql);
     	$sql->bindValue(":name", $name);
-    	$sql->bindValue(":description", $description);
+        $sql->bindValue(":description", $description);
+        $sql->bindValue(":price", $price);
     	$sql->execute();
 
     	header("Location: ".BASE_URL."dishes");
@@ -122,12 +123,13 @@ class Dishes extends Model {
     	exit;
     }
     //edita item da linha tradicional
-    public function editDishe($id, $name, $description) {
-    	$sql = "UPDATE menu SET name = :name, description = :description WHERE id = :id";
+    public function editDishe($id, $name, $description, $price) {
+    	$sql = "UPDATE menu SET name = :name, description = :description, price = :price WHERE id = :id";
     	$sql = $this->db->prepare($sql);
     	$sql->bindValue(":id", $id);
     	$sql->bindValue(":name", $name);
-    	$sql->bindValue(":description", $description);
+        $sql->bindValue(":description", $description);
+        $sql->bindValue(":price", $price);
     	$sql->execute();
 
     	header("Location: ".BASE_URL."dishes");

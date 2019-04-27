@@ -9,6 +9,10 @@
 			<label for="description">Descrição</label>
 			<input type="text" name="description" class="form-control" id="description" required="required" />
 		</div>
+		<div class="form-group">
+			<label for="price">Preço</label>
+			<input type="text" name="price" class="form-control" id="price" required="required" />
+		</div>
 		<button type="submit" class="btn btn-primary">Adicionar</button>
 	</form>
 	<hr/>

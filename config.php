@@ -7,7 +7,7 @@ global $db;
 
 $config = array();
 if(ENVIRONMENT == 'development') {
-	define("BASE_URL", "http://localhost/www/sandubaoitapecericapainel/");
+	define("BASE_URL", "http://localhost/sandubaoitapecericapainel/");
 	$config['dbname'] = 'sandubao';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';

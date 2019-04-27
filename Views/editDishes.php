@@ -7,8 +7,12 @@
 			<input type="text" name="name" class="form-control" id="name" required="required" value="<?php echo $info['name']; ?>" autofocus />
 		</div>
 		<div class="form-group">
-			<label for="description">Descrição</label>
-			<input type="text" name="description" class="form-control" id="description" required="required" value="<?php echo $info['description']; ?>" />
+			<label for="descriptionDishes">Descrição</label>
+			<input type="text" name="description" class="form-control" id="descriptionDishes" required="required" value="<?php echo $info['description']; ?>" />
+		</div>		
+		<div class="form-group">
+			<label for="price">Preço</label>
+			<input type="text" name="price" class="form-control" id="price" required="required" value="<?php echo $info['price']; ?>" />
 		</div>
 		<button type="submit" class="btn btn-primary">Salvar</button>
 	</form>

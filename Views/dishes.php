@@ -7,6 +7,7 @@
 				<th scope="col">Nº</th>
 				<th scope="col">Nome</th>
 				<th scope="col">Descrição</th>
+				<th scope="col">Preço</th>
 				<th scope="col">Ações</th>
 			</tr>
 		</thead>
@@ -16,9 +17,10 @@
 			<tr>
 				<td><?php echo $dishe['id']; ?></td>
 				<td><?php echo $dishe['name']; ?></td>
-				<td width="600">
+				<td width="400">
 					<?php echo $dishe['description']; ?>
 				</td>
+				<td>R$ <?php echo number_format($dishe['price'], 2, ',', '.'); ?></td>
 				<td width="180">
 				<a href="<?php echo BASE_URL.'dishes/del/'.$dishe['id']; ?>" class="btn btn-danger">Excluir</a>
 				<a href="<?php echo BASE_URL.'dishes/edit/'.$dishe['id']; ?>" class="btn btn-success">Editar</a>
@@ -42,7 +44,7 @@
 			<tr>
 				<td><?php echo $dishegourmet['id']; ?></td>
 				<td><?php echo $dishegourmet['name']; ?></td>
-				<td width="600">
+				<td width="400">
 					<?php echo $dishegourmet['description']; ?>
 				</td>
 				<td width="180">
@@ -68,7 +70,7 @@
 			<tr>
 				<td><?php echo $dishegiant['id']; ?></td>
 				<td><?php echo $dishegiant['name']; ?></td>
-				<td width="600">
+				<td width="400">
 					<?php echo $dishegiant['description']; ?>
 				</td>
 				<td width="180">
