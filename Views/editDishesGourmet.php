@@ -10,6 +10,10 @@
 			<label for="description_gourmet">Descrição</label>
 			<input type="text" name="description_gourmet" class="form-control" id="description_gourmet" required="required" value="<?php echo $info['description']; ?>" />
 		</div>
+		<div class="form-group">
+			<label for="price">Preço</label>
+			<input type="text" name="price" class="form-control" id="price" required="required" value="<?php echo $info['price']; ?>" />
+		</div>
 		<button type="submit" class="btn btn-primary">Salvar</button>
 	</form>
 	<?php endforeach; ?>

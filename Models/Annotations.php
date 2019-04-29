@@ -16,7 +16,7 @@ class Annotations extends Model {
     public function getAll() {
         $array = array();
 
-        $sql = "SELECT * FROM annotations ORDER BY id DESC";
+        $sql = "SELECT * FROM annotations ORDER BY id DESC LIMIT 30";
         $sql = $this->db->query($sql);
 
         if($sql->rowCount() > 0) {

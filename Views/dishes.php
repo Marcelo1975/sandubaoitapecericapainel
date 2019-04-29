@@ -35,6 +35,7 @@
 				<th scope="col">Nº</th>
 				<th scope="col">Nome</th>
 				<th scope="col">Descrição</th>
+				<th scope="col">Preço</th>
 				<th scope="col">Ações</th>
 			</tr>
 		</thead>
@@ -47,6 +48,7 @@
 				<td width="400">
 					<?php echo $dishegourmet['description']; ?>
 				</td>
+				<td><?php echo number_format($dishegourmet['price'], 2, ',', '.'); ?></td>
 				<td width="180">
 				<a href="<?php echo BASE_URL.'dishes/delgourmet/'.$dishegourmet['id']; ?>" class="btn btn-danger">Excluir</a>
 				<a href="<?php echo BASE_URL.'dishes/editgourmet/'.$dishegourmet['id']; ?>" class="btn btn-success">Editar</a>
@@ -61,6 +63,7 @@
 				<th scope="col">Nº</th>
 				<th scope="col">Nome</th>
 				<th scope="col">Descrição</th>
+				<th>Preço</th>
 				<th scope="col">Ações</th>
 			</tr>
 		</thead>
@@ -73,6 +76,7 @@
 				<td width="400">
 					<?php echo $dishegiant['description']; ?>
 				</td>
+				<td><?php echo number_format($dishegiant['price'], 2, ',', '.'); ?></td>
 				<td width="180">
 				<a href="<?php echo BASE_URL.'dishes/delgiant/'.$dishegiant['id']; ?>" class="btn btn-danger">Excluir</a>
 				<a href="<?php echo BASE_URL.'dishes/editgiant/'.$dishegiant['id']; ?>" class="btn btn-success">Editar</a>

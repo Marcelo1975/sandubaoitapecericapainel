@@ -85,8 +85,8 @@ class HumanresourcesController extends Controller {
                 $enter = '00/00/0000';
             }
 
-            if(isset($_POST['exit']) && !empty($_POST['exit()'])) {                
-                $exit = addslashes($_POST['exit()']);
+            if(isset($_POST['exit']) && !empty($_POST['exit'])) {                
+                $exit = addslashes($_POST['exit']);
             } else {
                 $exit = '00/00/0000';
             }

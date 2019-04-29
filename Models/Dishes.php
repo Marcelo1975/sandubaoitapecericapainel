@@ -136,24 +136,26 @@ class Dishes extends Model {
     	exit;
     }
     //edita item da linha gourmet
-    public function editDishesGourmet($id, $name_gourmet, $description_gourmet) {
-    	$sql = "UPDATE menu_gourmet SET name = :name, description = :description WHERE id = :id";
+    public function editDishesGourmet($id, $name_gourmet, $description_gourmet, $price) {
+    	$sql = "UPDATE menu_gourmet SET name = :name, description = :description, price = :price WHERE id = :id";
     	$sql = $this->db->prepare($sql);
     	$sql->bindValue(":id", $id);
     	$sql->bindValue(":name", $name_gourmet);
-    	$sql->bindValue(":description", $description_gourmet);
+        $sql->bindValue(":description", $description_gourmet);
+        $sql->bindValue(":price", $price);
     	$sql->execute();
 
     	header("Location: ".BASE_URL."dishes");
     	exit;
     }
     //edita item da linha gigante
-    public function editDishesGiant($id, $name_giant, $description_giant) {
-    	$sql = "UPDATE menu_giant SET name = :name, description = :description WHERE id = :id";
+    public function editDishesGiant($id, $name_giant, $description_giant, $price) {
+    	$sql = "UPDATE menu_giant SET name = :name, description = :description, price = :price WHERE id = :id";
     	$sql = $this->db->prepare($sql);
     	$sql->bindValue(":id", $id);
     	$sql->bindValue(":name", $name_giant);
-    	$sql->bindValue(":description", $description_giant);
+        $sql->bindValue(":description", $description_giant);
+        $sql->bindValue(":price", $price);
     	$sql->execute();
 
     	header("Location: ".BASE_URL."dishes");

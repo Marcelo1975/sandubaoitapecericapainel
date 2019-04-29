@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css" />
 
     <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
@@ -64,6 +65,19 @@
                     Vendas</a>
                 </li>
                 <li>
+                    <a href="<?php echo BASE_URL; ?>calc">
+                    <svg class="nav-img" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 50 50"
+                    style=" fill:#ffffff;"><g id="surface1">
+                        <path style=" " d="M 11 4 C 9.355469 4 8 5.355469 8 7 L 8 43 C 8 44.644531 9.355469 46 11 46 L 39 46 C 40.644531 46 42 44.644531 42 43 L 42 7 C 42 5.355469 40.644531 4 39 4 Z M 11 6 L 39 6 C 39.554688 6 40 6.445313 40 7 L 40 43 C 40 43.554688 39.554688 44 39 44 L 11 44 C 10.445313 44 10 43.554688 10 43 L 10 7 C 10 6.445313 10.445313 6 11 6 Z M 12 8 L 12 18 L 38 18 L 38 8 Z M 14 10 L 36 10 L 36 16 L 14 16 Z M 24 12 L 24 14 L 26 14 L 26 12 Z M 28 12 L 28 14 L 30 14 L 30 12 Z M 32 12 L 32 14 L 34 14 L 34 12 Z M 12.8125 22 C 12.335938 22.089844 11.992188 22.511719 12 23 L 12 41 C 12 41.550781 12.449219 42 13 42 L 37 42 C 37.550781 42 38 41.550781 38 41 L 38 23 C 38 22.449219 37.550781 22 37 22 L 13 22 C 12.96875 22 12.9375 22 12.90625 22 C 12.875 22 12.84375 22 12.8125 22 Z M 14 24 L 18 24 L 18 28 L 14 28 Z M 20 24 L 24 24 L 24 28 L 20 28 Z M 26 24 L 30 24 L 30 28 L 26 28 Z M 32 24 L 36 24 L 36 28 L 32 28 Z M 14 30 L 18 30 L 18 34 L 14 34 Z M 20 30 L 24 30 L 24 34 L 20 34 Z M 26 30 L 30 30 L 30 34 L 26 34 Z M 32 30 L 36 30 L 36 34 L 32 34 Z M 14 36 L 18 36 L 18 40 L 14 40 Z M 20 36 L 24 36 L 24 40 L 20 40 Z M 26 36 L 30 36 L 30 40 L 26 40 Z M 32 36 L 36 36 L 36 40 L 32 40 Z ">
+                        </path></g></svg>                    
+                    Calculadora</a>
+                </li>
+                <li>
+                    <a href="<?php echo BASE_URL; ?>uploadReceipt">
+                    <img class="nav-img" src="https://img.icons8.com/office/16/000000/purchase-order.png">
+                    Comp/Recibos</a>
+                </li>
+                <li>
                     <a href="<?php echo BASE_URL; ?>reports">
                     <img class="nav-img" src="<?php echo BASE_URL; ?>assets/images/icons/report.png" />
                     Relatórios</a>
@@ -101,8 +115,8 @@
             </nav>
         </div>
         <div class="container-fluid">            
-                <?php $this->loadViewInTemplate($viewName, $viewData); ?>
-            </div>
+            <?php $this->loadViewInTemplate($viewName, $viewData); ?>
+        </div>
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->

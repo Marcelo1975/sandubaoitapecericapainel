@@ -10,6 +10,10 @@
 			<label for="description_giant">Descrição</label>
 			<input type="text" name="description_giant" class="form-control" id="description_giant" required="required" value="<?php echo $info['description']; ?>" />
 		</div>
+		<div class="form-group">
+			<label for="price">Preçp</label>
+			<input type="text" name="price" class="form-control" id="price" required="required" value="<?php echo $info['price']; ?>" />
+		</div>
 		<button type="submit" class="btn btn-primary">Salvar</button>
 	</form>
 	<?php endforeach; ?>

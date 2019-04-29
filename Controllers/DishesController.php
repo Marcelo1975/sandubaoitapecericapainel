@@ -88,8 +88,9 @@ class DishesController extends Controller {
         if(isset($_POST['name_gourmet']) && !empty($_POST['name_gourmet'])) {
             $name_gourmet = addslashes($_POST['name_gourmet']);
             $description_gourmet = addslashes($_POST['description_gourmet']);
+            $price = addslashes($_POST['price']);
 
-            $d->editDishesGourmet($id, $name_gourmet, $description_gourmet);
+            $d->editDishesGourmet($id, $name_gourmet, $description_gourmet, $price);
         }
 
         $this->loadTemplate('editDishesGourmet', $data);
@@ -105,8 +106,9 @@ class DishesController extends Controller {
         if(isset($_POST['name_giant']) && !empty($_POST['name_giant'])) {
             $name_giant = addslashes($_POST['name_giant']);
             $description_giant = addslashes($_POST['description_giant']);
+            $price = addslashes($_POST['price']);
 
-            $d->editDishesGiant($id, $name_giant, $description_giant);
+            $d->editDishesGiant($id, $name_giant, $description_giant, $price);
         }
 
         $this->loadTemplate('editDishesGiant', $data);

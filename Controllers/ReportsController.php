@@ -60,6 +60,5 @@ class ReportsController extends Controller {
         $report->WriteHTML($html);
         $report->Output('relatorio.pdf', 'I');
         
-    } 
-
+    }
 }

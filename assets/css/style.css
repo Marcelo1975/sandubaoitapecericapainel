@@ -194,10 +194,62 @@ a.article, a.article:hover {
 	font-size: 1.2em;
 	font-weight: bold;
 }
+.button{
+	width:50px;
+	height:50px;
+	font-size:25px;
+	margin:2px;
+	cursor:pointer;
+}
+.buttonEqual{
+    width:53px;
+    height:106px;
+    font-size:25px;
+}
+.buttonZero{
+    width:106px;
+    height:50px;
+    font-size:25px;
+}
+.textview{
+	width:217px;
+	margin:5px;
+	font-size:25px;
+	padding:5px;
+	border:1px solid #000;
+}
+.main{
+    margin-top:6rem;
+    margin-left:6rem;
+	position:absolute;
+    background-color:#999;
+}
+#cont-1{
+    display: none;
+    flex-wrap:wrap;
+}
+.cont-img1{
+    width:200px;
+    flex-direction: column;
+}
+#cont-2{
+    display: none;
+    flex-wrap:wrap;
+}
+.cont-img2{
+    width:200px;
+    flex-direction: column;
+}
+.ant{
+    margin-top:6rem;
+    margin-right:6rem;
+}
+.ant textarea{
+    height:15rem;
+}
 #content {
-    padding: 20px;
-    min-height: 100vh;
-    transition: all 0.3s;
+    width:5rem;
+    height:100vh;
 }
 .userName{/*NOME DO USUARIO*/
 	margin-left: 1em;

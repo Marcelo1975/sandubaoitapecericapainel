@@ -48,7 +48,7 @@ class Humanrecurses extends Model {
     }
     //editando funcionario
     public function editEmployee($id, $fistname, $lastname, $work, $enter, $exit, $email, $phone, $salary) {
-    	$sql = "UPDATE humanrecurces SET fistname = :fistname, lastname = :lastname, work = :work, data_enter = :data_enter, data_exit = :data_exit, email = :email, phone = :phone, salary = :salary WHERE id = :id";
+		$sql = "UPDATE humanrecurces SET fistname = :fistname, lastname = :lastname, work = :work, data_enter = :data_enter, data_exit = :data_exit, email = :email, phone = :phone, salary = :salary WHERE id = :id";
     	$sql = $this->db->prepare($sql);
     	$sql->bindValue(":id", $id);
     	$sql->bindValue(":fistname", $fistname);
